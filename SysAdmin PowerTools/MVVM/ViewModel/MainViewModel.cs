@@ -9,7 +9,7 @@ namespace SysAdmin_PowerTools.MVVM.ViewModel
 {
     class MainViewModel : ObservableObject
     {
-        publix MainViewModel()
+        public MainViewModel()
         {
             // Constructor
         }

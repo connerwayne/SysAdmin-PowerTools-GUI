@@ -14,7 +14,7 @@
         Title="SysAdmin PowerTools">
 
     <Border Background="#272537" 
-            CornerRadius="20">   
+            CornerRadius="20">
 
         <Grid>
             <Grid.ColumnDefinitions>
@@ -47,25 +47,21 @@
                 <RadioButton Content="ECM Keyword Lookup"
                                 Foreground="White"
                                 FontSize="18"
-                                IsChecked="True"
                                 GroupName="Menu"
                                 Style="{StaticResource MenuButtonTheme}" 
                                 Checked="RadioButton_Checked"/>
                 <RadioButton Content="Access Review Tools"
                                 Foreground="White"
                                 FontSize="18"
-                                IsChecked="True"
                                 GroupName="Menu"
                                 Style="{StaticResource MenuButtonTheme}" 
                                 Checked="RadioButton_Checked"/>
                 <RadioButton Content="BankSystems SOPs"
                                 Foreground="White"
                                 FontSize="18"
-                                IsChecked="True"
                                 GroupName="Menu"
                                 Style="{StaticResource MenuButtonTheme}" 
                                 Checked="RadioButton_Checked"/>
-
             </StackPanel>
 
             <TextBox Width="250"
@@ -78,12 +74,8 @@
 
             <ContentControl Grid.Column="1" 
                             Grid.Row="1" 
-                            Margin="10"
-
-
-
+                            Margin="10"/>
         </Grid>
-
     </Border>
-
 </Window>
+
