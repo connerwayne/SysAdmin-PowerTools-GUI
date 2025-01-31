@@ -1,7 +1,8 @@
 ﻿<Application x:Class="SysAdmin_PowerTools.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:SysAdmin_PowerTools"
+             xmlns:viewModel="clr-namespace:SysAdmin_PowerTools.MVVM.ViewModel"
+             xmlns:view="clr-namespace:SysAdmin_PowerTools.MVVM.View"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
         <ResourceDictionary>
@@ -9,7 +10,14 @@
                 <ResourceDictionary Source="Theme/MenuButtonTheme.xaml"/>
                 <ResourceDictionary Source="Theme/TexboxTheme.xaml"/>
             </ResourceDictionary.MergedDictionaries>
-        </ResourceDictionary>
 
+            <DataTemplate DataType="{x:Type viewModel:HomeViewModel}">
+                <view:HomeView/>
+            </DataTemplate>
+
+        </ResourceDictionary>
     </Application.Resources>
+    
 </Application>
+
+

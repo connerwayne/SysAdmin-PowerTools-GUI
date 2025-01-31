@@ -24,7 +24,7 @@
                 </Border.Background>
 
                 <Border.Clip>
-                    <RectangleGeometry RadiusX="10" RadiusY="10" Rect="0,0,400,200"/>
+                    <RectangleGeometry RadiusX="10" RadiusY="10" Rect="0,0,320,200"/>
                 </Border.Clip>
 
                 <Grid>
@@ -41,10 +41,9 @@
                                       FontSize="14"
                                       Foreground="White"
                                       Margin="30,10,20,10"/>
-
                     </StackPanel>
 
-                    <Image  Width="350"
+                    <Image  Width="320"
                             Height="200"
                             Source="/Images/outage.png"                            
                             HorizontalAlignment="Center"
@@ -64,7 +63,6 @@
                         <GradientStop Color="IndianRed" Offset="1"/>
                     </LinearGradientBrush>
                 </Border.Background>
-
             </Border>
         </StackPanel>
 
@@ -78,23 +76,25 @@
                 <Border Width="150"
                         Height="150"
                         Background="Aquamarine"
-                        CornerRadius="10"/>
+                        CornerRadius="10"
+                        Margin="15,0,0,0"/>
                 <Border Width="150"
                         Height="150"
                         Background="MistyRose"
-                        CornerRadius="10"/>
+                        CornerRadius="10"
+                        Margin="15,0,0,0"/>
                 <Border Width="150"
                         Height="150"
                         Background="Yellow"
-                        CornerRadius="10"/>
+                        CornerRadius="10"
+                        Margin="15,0,0,0"/>
                 <Border Width="150"
                         Height="150"
                         Background="DarkGoldenrod"
-                        CornerRadius="10"/>
-
+                        CornerRadius="10"
+                        Margin="15,0,0,0"/>
             </StackPanel>
-
         </StackPanel>
-
     </StackPanel>
 </UserControl>
+

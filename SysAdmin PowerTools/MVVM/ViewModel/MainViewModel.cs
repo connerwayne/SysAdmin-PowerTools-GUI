@@ -9,9 +9,25 @@ namespace SysAdmin_PowerTools.MVVM.ViewModel
 {
     class MainViewModel : ObservableObject
     {
+        public HomeViewModel HomeVM { get; set; }
+        
+        private object _currentView;
+        
+        public object CurrentView
+        {
+            get { return _currentView; }
+            set
+            {
+                _currentView = value;
+                OnPropertyChanged();
+            }
+        }
+
         public MainViewModel()
         {
-            // Constructor
+            HomeVM = new HomeViewModel();
+            CurrentView = HomeVM;
         }
     }
 }
+

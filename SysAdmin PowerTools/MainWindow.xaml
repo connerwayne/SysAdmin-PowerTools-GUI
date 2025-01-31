@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SysAdmin_PowerTools"
+        xmlns:viewModel="clr-namespace:SysAdmin_PowerTools.MVVM.ViewModel"
         mc:Ignorable="d"
         Height="600" Width="920"
         WindowStyle="None" 
@@ -12,6 +13,12 @@
         ResizeMode="NoResize" 
         WindowStartupLocation="CenterScreen" 
         Title="SysAdmin PowerTools">
+
+    <Window.DataContext>
+
+        <viewModel:MainViewModel/>
+
+    </Window.DataContext>
 
     <Border Background="#272537" 
             CornerRadius="20">
@@ -80,7 +87,9 @@
 
             <ContentControl Grid.Column="1" 
                             Grid.Row="1" 
-                            Margin="10"/>
+                            Margin="10"
+                            Content="{Binding CurrentView}"/>
+           
         </Grid>
     </Border>
 </Window>
