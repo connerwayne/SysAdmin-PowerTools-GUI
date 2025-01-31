@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:SysAdmin_PowerTools"
         xmlns:viewModel="clr-namespace:SysAdmin_PowerTools.MVVM.ViewModel"
         mc:Ignorable="d"
-        Height="600" Width="920"
+        Height="600" Width="1000"
         WindowStyle="None" 
         AllowsTransparency="True" 
         Background="Transparent" 
@@ -15,9 +15,7 @@
         Title="SysAdmin PowerTools">
 
     <Window.DataContext>
-
         <viewModel:MainViewModel/>
-
     </Window.DataContext>
 
     <Border Background="#272537" 
@@ -25,7 +23,7 @@
 
         <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="301"/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
@@ -34,63 +32,76 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
 
-            <TextBlock Grid.Column="0" 
-                       Grid.Row="0" 
+            <TextBlock 
                        Text="SysAdmin PowerTools" 
                        Foreground="White" 
                        FontSize="20" 
-                       HorizontalAlignment="Left" 
+                       HorizontalAlignment="Center" 
                        VerticalAlignment="Center"
-                       Margin="5,0,0,0"/>
+                       FontFamily="/Fonts/#Poppins" Height="30" Width="218"/>
 
             <StackPanel Grid.Row="1">
                 <RadioButton Content="Home"
-                                Foreground="White"
-                                FontSize="18"
-                                IsChecked="True"
-                                GroupName="Menu"
-                                Style="{StaticResource MenuButtonTheme}" 
-                                Checked="RadioButton_Checked"/>
-                <RadioButton Content="ECM Keyword Lookup"
-                                Foreground="White"
-                                FontSize="18"
-                                GroupName="Menu"
-                                Style="{StaticResource MenuButtonTheme}" 
-                                Checked="RadioButton_Checked"/>
-                <RadioButton Content="Access Review Tools"
-                                Foreground="White"
-                                FontSize="18"
-                                GroupName="Menu"
-                                Style="{StaticResource MenuButtonTheme}" 
-                                Checked="RadioButton_Checked"/>
+                             Foreground="White"
+                             FontSize="18"
+                             IsChecked="True"
+                             GroupName="Menu"
+                             Style="{StaticResource MenuButtonTheme}" 
+                             Command="{Binding HomeViewCommand}"/>
+
                 <RadioButton Content="Tech Docs"
-                                Foreground="White"
-                                FontSize="18"
-                                GroupName="Menu"
-                                Style="{StaticResource MenuButtonTheme}" 
-                                Checked="RadioButton_Checked"/>
+                             Foreground="White"
+                             FontSize="18"
+                             GroupName="Menu"
+                             Style="{StaticResource MenuButtonTheme}" 
+                             Command="{Binding TechDocViewCommand}"/>
+
+                <!-- Add the following RadioButtons to the StackPanel
+                
+                <RadioButton Content="Server Tools"
+                             Foreground="White"
+                             FontSize="18"
+                             GroupName="Menu"
+                             Style="{StaticResource MenuButtonTheme}" 
+                             Command="{Binding ServerToolsViewCommand}"/>
+
+                <RadioButton Content="ECM Keyword Lookup"
+                             Foreground="White"
+                             FontSize="18"
+                             GroupName="Menu"
+                             Style="{StaticResource MenuButtonTheme}" 
+                             Command="{Binding KeywordLookupViewCommand}"/>
+
+                <RadioButton Content="Access Review Tools"
+                             Foreground="White"
+                             FontSize="18"
+                             GroupName="Menu"
+                             Style="{StaticResource MenuButtonTheme}" 
+                             Command="{Binding AccessReviewViewCommand}"/>               
+
                 <RadioButton Content="ESA Diagrams"
-                                Foreground="White"
-                                FontSize="18"
-                                GroupName="Menu"
-                                Style="{StaticResource MenuButtonTheme}" 
-                                Checked="RadioButton_Checked"/>
+                             Foreground="White"
+                             FontSize="18"
+                             GroupName="Menu"
+                             Style="{StaticResource MenuButtonTheme}" 
+                             Command="{Binding DiagramsViewCommand}"/>
+                -->
+
             </StackPanel>
 
             <TextBox Width="250"
-                    Height="40"
-                    VerticalContentAlignment="Center"
-                    HorizontalAlignment="Left"
-                    Margin="5"
-                    Grid.Column="1"
-                    Style="{StaticResource TextBoxTheme}"/>
+                     VerticalContentAlignment="Center"
+                     HorizontalAlignment="Left"
+                     Margin="5,18,0,17"
+                     Grid.Column="1"
+                     Style="{StaticResource TextBoxTheme}"/>
 
             <ContentControl Grid.Column="1" 
                             Grid.Row="1" 
-                            Margin="10"
+                            Margin="10,10,10,10"
                             Content="{Binding CurrentView}"/>
-           
         </Grid>
     </Border>
 </Window>
+
 
