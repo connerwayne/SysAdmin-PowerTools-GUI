@@ -26,13 +26,13 @@ namespace SysAdmin_PowerTools.MVVM.ViewModel
         public RelayCommand HomeViewCommand { get; set; }  // a RelayCommand for the HomeView  
         public RelayCommand TechDocViewCommand { get; set; } // a RelayCommand for the TechDocView
         public RelayCommand ServerToolsViewCommand { get; set; } // a RelayCommand for the ServerToolsView
-
+        public RelayCommand KeywordLookupViewCommand { get; set; }
 
 
         public HomeViewModel HomeVM { get; set; } // a HomeViewModel object
         public TechDocViewModel TechDocVM { get; set; } // a TechDocViewModel object
         public ServerToolsViewModel ServerToolsVM { get; set; } // a ServerToolsViewModel object
-
+        public KeywordLookupViewModel KeywordLookupVM { get; set; }
 
 
         private object _currentView;
@@ -70,6 +70,10 @@ namespace SysAdmin_PowerTools.MVVM.ViewModel
             ServerToolsViewCommand = new RelayCommand(o =>
             {
                 CurrentView = ServerToolsVM;
+            });
+            KeywordLookupViewCommand = new RelayCommand(o =>
+            {
+                CurrentView = KeywordLookupVM;
             });
 
         }

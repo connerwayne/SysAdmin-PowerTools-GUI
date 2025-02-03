@@ -73,6 +73,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="MVVM\View\KeywordLookupView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MVVM\View\ServerToolsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -92,11 +96,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MVVM\ViewModel\HomeViewModel.cs" />
+    <Compile Include="MVVM\ViewModel\KeywordLookupViewModel.cs" />
     <Compile Include="MVVM\ViewModel\MainViewModel.cs" />
     <Compile Include="MVVM\ViewModel\ServerToolsViewModel.cs" />
     <Compile Include="MVVM\ViewModel\TechDocViewModel.cs" />
     <Compile Include="MVVM\View\HomeView.xaml.cs">
       <DependentUpon>HomeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\View\KeywordLookupView.xaml.cs">
+      <DependentUpon>KeywordLookupView.xaml</DependentUpon>
     </Compile>
     <Compile Include="MVVM\View\ServerToolsView.xaml.cs">
       <DependentUpon>ServerToolsView.xaml</DependentUpon>

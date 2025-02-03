@@ -38,6 +38,10 @@ Page Instructions to add new items to the project:
                 <view:ServerToolsView/>
             </DataTemplate>
 
+            <DataTemplate DataType="{x:Type viewModel:KeywordLookupViewModel}">
+                <view:KeywordLookupView/>
+            </DataTemplate>
+
         </ResourceDictionary>
     </Application.Resources>
 </Application>
