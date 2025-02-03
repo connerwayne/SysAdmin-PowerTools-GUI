@@ -49,16 +49,18 @@ namespace SysAdmin_PowerTools.MVVM.ViewModel
 
         public MainViewModel()
         {
+            // Instantiate the ViewModel objects --- this makes the views available to the MainViewModel when called
             HomeVM = new HomeViewModel();
             TechDocVM = new TechDocViewModel();
             ServerToolsVM = new ServerToolsViewModel();
+            KeywordLookupVM = new KeywordLookupViewModel();
             CurrentView = HomeVM;
 
 
 
 
 
-
+            // Instantiate the RelayCommand objects --- this makes the views available to the MainViewModel when called
             HomeViewCommand = new RelayCommand(o =>
             {
                 CurrentView = HomeVM;
