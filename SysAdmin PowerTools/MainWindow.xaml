@@ -40,7 +40,8 @@
                        VerticalAlignment="Center"
                        FontFamily="/Fonts/#Poppins" Height="30" Width="218"/>
 
-            <StackPanel Grid.Row="1">      <!-- Add the following StackPanel to the Grid.Row="1" element -->
+            <StackPanel Grid.Row="1">    
+                <!-- Add the following RadioButtons to the StackPanel -->
                 <RadioButton Content="Home" 
                              Foreground="White"
                              FontSize="18"
@@ -68,28 +69,14 @@
                              FontSize="18"
                              GroupName="Menu"
                              Style="{StaticResource MenuButtonTheme}" 
-                             Command="{Binding KeywordLookupViewCommand}"/>
-                
-                
-                
-
+                             Command="{Binding KeywordLookupViewCommand}"/>           
+                              
                 <RadioButton Content="Access Review Tools"
                              Foreground="White"
                              FontSize="18"
                              GroupName="Menu"
                              Style="{StaticResource MenuButtonTheme}" 
                              Command="{Binding AccessReviewViewCommand}"/>
-
-                <!-- Add the following RadioButtons to the StackPanel -->
-                <!--
-                
-                <RadioButton Content="ESA Diagrams"
-                             Foreground="White"
-                             FontSize="18"
-                             GroupName="Menu"
-                             Style="{StaticResource MenuButtonTheme}" 
-                             Command="{Binding DiagramsViewCommand}"/>
-                -->
 
             </StackPanel>
 
