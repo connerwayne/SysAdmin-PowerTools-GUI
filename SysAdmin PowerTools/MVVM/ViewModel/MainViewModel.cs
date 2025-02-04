@@ -1,12 +1,9 @@
 ﻿
-
-
-
-
 // Page Instructions to add new items to the project:
 
 // 1. Add RelayCommand below for the item you want to activate. 
 // 2. Add a new ViewModel object for the item you want to activate.
+// 3. Instantiate both the RelayCommand and ViewModel objects in the MainViewModel constructor.
 // 3. Add a new DataTemplate in the App.xaml file.
 // 4. 
 
@@ -27,12 +24,14 @@ namespace SysAdmin_PowerTools.MVVM.ViewModel
         public RelayCommand TechDocViewCommand { get; set; } // a RelayCommand for the TechDocView
         public RelayCommand ServerToolsViewCommand { get; set; } // a RelayCommand for the ServerToolsView
         public RelayCommand KeywordLookupViewCommand { get; set; }
+        public RelayCommand AccessReviewViewCommand { get; set; }
 
 
         public HomeViewModel HomeVM { get; set; } // a HomeViewModel object
         public TechDocViewModel TechDocVM { get; set; } // a TechDocViewModel object
         public ServerToolsViewModel ServerToolsVM { get; set; } // a ServerToolsViewModel object
         public KeywordLookupViewModel KeywordLookupVM { get; set; }
+        public AccessReviewViewModel AccessReviewVM { get; set; } 
 
 
         private object _currentView;
@@ -54,10 +53,8 @@ namespace SysAdmin_PowerTools.MVVM.ViewModel
             TechDocVM = new TechDocViewModel();
             ServerToolsVM = new ServerToolsViewModel();
             KeywordLookupVM = new KeywordLookupViewModel();
+            AccessReviewVM = new AccessReviewViewModel();
             CurrentView = HomeVM;
-
-
-
 
 
             // Instantiate the RelayCommand objects --- this makes the views available to the MainViewModel when called
@@ -76,6 +73,10 @@ namespace SysAdmin_PowerTools.MVVM.ViewModel
             KeywordLookupViewCommand = new RelayCommand(o =>
             {
                 CurrentView = KeywordLookupVM;
+            });
+            AccessReviewViewCommand = new RelayCommand(o =>
+            {
+                CurrentView = AccessReviewVM;
             });
 
         }

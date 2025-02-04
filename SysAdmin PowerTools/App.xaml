@@ -42,6 +42,10 @@ Page Instructions to add new items to the project:
                 <view:KeywordLookupView/>
             </DataTemplate>
 
+            <DataTemplate DataType="{x:Type viewModel:AccessReviewViewModel}">
+                <view:AccessReviewView/>
+            </DataTemplate>
+
         </ResourceDictionary>
     </Application.Resources>
 </Application>

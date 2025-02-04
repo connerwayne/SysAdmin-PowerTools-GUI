@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace SysAdmin_PowerTools.MVVM.ViewModel
 {
-    internal class KeywordLookupViewModel
-    {        
+    internal class AccessReviewViewModel
+    {
     }
 }
-

@@ -71,16 +71,18 @@
                              Command="{Binding KeywordLookupViewCommand}"/>
                 
                 
-                <!-- Add the following RadioButtons to the StackPanel -->
-                <!--
+                
 
                 <RadioButton Content="Access Review Tools"
                              Foreground="White"
                              FontSize="18"
                              GroupName="Menu"
                              Style="{StaticResource MenuButtonTheme}" 
-                             Command="{Binding AccessReviewViewCommand}"/>               
+                             Command="{Binding AccessReviewViewCommand}"/>
 
+                <!-- Add the following RadioButtons to the StackPanel -->
+                <!--
+                
                 <RadioButton Content="ESA Diagrams"
                              Foreground="White"
                              FontSize="18"
